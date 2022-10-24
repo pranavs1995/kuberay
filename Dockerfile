@@ -1,6 +1,6 @@
 FROM rayproject/ray:2.0.0
 
-RUN mkdir -p /test/location
+RUN mkdir -p /tmp/location/test
 
 EXPOSE 6379 8265 10001 8000
 
