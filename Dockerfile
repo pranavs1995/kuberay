@@ -9,7 +9,7 @@ RUN mkdir -p /tmp/location/test
 
 ADD https://github.com/ray-project/test_dag/archive/c620251044717ace0a4c19d766d43c5099af8a77.zip /home/ray/
 
-RUN chmod 777 /home/ray/c620251044717ace0a4c19d766d43c5099af8a77.zip
+RUN sudo chmod +x /home/ray/c620251044717ace0a4c19d766d43c5099af8a77.zip
 
 EXPOSE 6379 8265 10001 8000
 
