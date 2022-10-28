@@ -1,4 +1,5 @@
 import ray
+import time
 from ray import serve
 from ray.serve.drivers import DAGDriver
 from ray.serve.deployment_graph import InputNode
@@ -28,6 +29,8 @@ class FruitMarket:
         if fruit not in self.directory:
             return -1
         else:
+            print("sleeping for 5 secs")
+            time.sleep(5)
             fruit_stand = self.directory[fruit]
             return ray.get(fruit_stand.check_price.remote(amount))
 
