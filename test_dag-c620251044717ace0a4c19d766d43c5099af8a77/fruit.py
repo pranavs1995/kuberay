@@ -35,6 +35,7 @@ class FruitMarket:
             price = fruit_stand.check_price.remote(amount)
             print(price)
             print(type(price))
+            time.sleep(5)
             return ray.get(price, timeout=60)
 
 
