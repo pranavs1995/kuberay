@@ -30,13 +30,12 @@ class FruitMarket:
             return -1
         else:
             print("sleeping for 5 secs")
-            time.sleep(5)
             fruit_stand = self.directory[fruit]
             print(fruit_stand)
-            print(fruit_stand.check_price(amount))
-            print(fruit_stand.check_price.remote(amount))
-            print(type(fruit_stand.check_price.remote(amount)))
-            return ray.get(fruit_stand.check_price.remote(amount))
+            price = fruit_stand.check_price.remote(amount)
+            print(price)
+            print(type(price))
+            return ray.get(price)
 
 
 @serve.deployment(user_config={"price": 3})
