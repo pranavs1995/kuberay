@@ -35,7 +35,7 @@ class FruitMarket:
             price = fruit_stand.check_price.remote(amount)
             print(price)
             print(type(price))
-            return ray.get(price)
+            return ray.get(price, timeout=60)
 
 
 @serve.deployment(user_config={"price": 3})
