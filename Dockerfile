@@ -1,4 +1,4 @@
-FROM rayproject/ray:2.0.0
+FROM rayproject/ray:nightly
 
 RUN sudo apt update && sudo apt-get install zip -y
 
