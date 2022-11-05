@@ -32,6 +32,8 @@ class FruitMarket:
             print("sleeping for 5 secs")
             time.sleep(5)
             fruit_stand = self.directory[fruit]
+            print(fruit_stand)
+            print(fruit_stand.check_price(amount))
             print(fruit_stand.check_price.remote(amount))
             print(type(fruit_stand.check_price.remote(amount)))
             return ray.get(fruit_stand.check_price.remote(amount))
