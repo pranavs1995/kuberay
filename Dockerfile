@@ -6,7 +6,7 @@ RUN mkdir -p /tmp/location/test
 
 WORKDIR /home/ray/
 
-COPY test_dag-c620251044717ace0a4c19d766d43c5099af8a77 test_dag-c620251044717ace0a4c19d766d43c5099af8a77
+COPY test_dag-41d09119cbdf8450599f993f51318e9e27c59098/ test_dag-c620251044717ace0a4c19d766d43c5099af8a77
 
 RUN zip c620251044717ace0a4c19d766d43c5099af8a77.zip test_dag-c620251044717ace0a4c19d766d43c5099af8a77/* && sudo rm -rf test_dag-c620251044717ace0a4c19d766d43c5099af8a77
 
