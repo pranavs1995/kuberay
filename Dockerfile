@@ -17,4 +17,6 @@ RUN sudo chmod +x c620251044717ace0a4c19d766d43c5099af8a77.zip && sudo chown ray
 
 EXPOSE 6379 8265 10001 8000
 
+WORKDIR /home/ray/test_dag-c620251044717ace0a4c19d766d43c5099af8a77/
+
 #CMD ray start --head
