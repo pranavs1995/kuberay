@@ -22,4 +22,4 @@ jobs:
     - name: Build the Docker image
       run: docker build . --file Dockerfile -t pranavs1995/ray-custom:$GITHUB_RUN_NUMBER-${GITHUB_SHA::7}
     - name: docker publish
-      run:  docker push pranavs1995/ray-custom:$GITHUB_RUN_NUMBER
+      run:  docker push pranavs1995/ray-custom:$GITHUB_RUN_NUMBER-${GITHUB_SHA::7}
