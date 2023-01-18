@@ -25,4 +25,3 @@ jobs:
       - name:  List S3
         run: |
           aws s3 ls
-          env
