@@ -11,13 +11,13 @@ on:
 jobs:
   check-jira:
     runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/master'
     steps:
       - name: Dump GitHub context
         env:
           GITHUB_CONTEXT: ${{ toJson(github) }}
         run: echo "$GITHUB_CONTEXT"
       - uses: thehanimo/pr-title-checker@v1.4.1
-        if: github.ref == 'refs/heads/main'
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           pass_on_octokit_error: false
