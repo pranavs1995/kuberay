@@ -18,7 +18,6 @@ jobs:
           run: echo "$GITHUB_CONTEXT"
   check-jira:
     runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/master'
     steps:
       - name: Dump GitHub context
         env:
