@@ -11,7 +11,7 @@ on:
 jobs:
   check-jira:
     runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/main'
+    if: github.ref == 'refs/heads/master'
     steps:
       - name: Dump GitHub context
         env:
