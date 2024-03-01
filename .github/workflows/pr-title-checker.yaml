@@ -9,7 +9,7 @@ on:
       - unlabeled
 
 jobs:
-  check:
+  check-jira:
     runs-on: ubuntu-latest
     steps:
       - name: Dump GitHub context
