@@ -12,6 +12,10 @@ jobs:
   check:
     runs-on: ubuntu-latest
     steps:
+      - name: Dump GitHub context
+        env:
+          GITHUB_CONTEXT: ${{ toJson(github) }}
+        run: echo "$GITHUB_CONTEXT"
       - uses: thehanimo/pr-title-checker@v1.4.1
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
